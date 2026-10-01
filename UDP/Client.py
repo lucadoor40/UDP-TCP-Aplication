@@ -1,14 +1,24 @@
 from socket import *
-serverName='127.0.0.1'
-serverPort=4033
-clientSocket = socket(AF_INET,SOCK_DGRAM)
-frases=['O TCP possui menor velocidade e maior confiabilidade em relação ao TCP',
-         'O TCP possui uma orientação a conexão(ao qual requer uma auntenticação chamada de three-way handshake',
-        'O TCP possui controle de fluxo, retransmissão e controle de congestionamento'
-        'O HTTP usa o TCP na porta 80'
+
+serverName = '127.0.0.1'
+serverPort = 8080
+
+clientSocket = socket(AF_INET, SOCK_DGRAM)
+clientSocket.settimeout(5)
+
+class Frases:
+    def __init__(self):
+        self.frases = [
+            'O TCP possui menor velocidade e maior confiabilidade em relação ao UDP',
+            'O TCP possui uma orientação a conexão (ao qual requer uma autenticação chamada de three-way handshake)',  # ✅ Corrigido
+            'O TCP possui controle de fluxo, retransmissão e controle de congestionamento',
+            'O HTTP usa o TCP na porta 80',
+            'O TCP tem um cabeçalho cujo o tamanho varia entre 20 a 60 bytes'
         ]
 
-for mensagem in frases:
+obj = Frases()
+
+for mensagem in obj.frases:
     try:
         print(f"Enviando: {mensagem}")
         clientSocket.sendto(mensagem.encode(), (serverName, serverPort))
@@ -22,4 +32,3 @@ for mensagem in frases:
         print(f"Erro: {e}\n")
 
 clientSocket.close()
-
