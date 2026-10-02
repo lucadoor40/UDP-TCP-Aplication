@@ -3,7 +3,7 @@ FROM python:3.11-slim
 
 WORKDIR /app
 
-COPY UDP\Server.py.
+COPY UDP/Server.py .
 
 EXPOSE 1206
 

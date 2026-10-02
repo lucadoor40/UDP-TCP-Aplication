@@ -3,7 +3,7 @@ FROM python:3.11-slim
 
 WORKDIR /app
 
-COPY TCP\Server.py.
+COPY TCP/Server.py .
 
 EXPOSE 1206
 
