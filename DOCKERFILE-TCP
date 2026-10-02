@@ -5,6 +5,6 @@ WORKDIR /app
 
 COPY TCP\Server.py.
 
-EXPOSE 8080
+EXPOSE 1206
 
 CMD ["python", "TCP\Server.py"]

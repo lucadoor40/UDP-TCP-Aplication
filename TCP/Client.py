@@ -1,7 +1,7 @@
 from socket import *
 
-serverName = '127.0.0.1'
-serverPort = 8080
+serverName = '10.0.99.150'
+serverPort = 1206
 
 clientSocket = socket(AF_INET, SOCK_STREAM)
 clientSocket.settimeout(5)

@@ -5,6 +5,6 @@ WORKDIR /app
 
 COPY UDP\Server.py.
 
-EXPOSE 8080
+EXPOSE 1206
 
 CMD ["python", "UDP\Server.py"]
