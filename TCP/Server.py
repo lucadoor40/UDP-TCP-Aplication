@@ -1,8 +1,8 @@
 from socket import *
 
-serverPort = 1206
+serverPort = 5000
 serverSocket = socket(AF_INET, SOCK_STREAM)
-serverSocket.bind(('10.0.99.150', serverPort))
+serverSocket.bind(('127.0.0.1', serverPort))
 serverSocket.listen(1)
 
 print("O servidor está escutando")

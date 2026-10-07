@@ -1,6 +1,6 @@
 from socket import *
 
-serverPort = 1206
+serverPort = 5000
 serverSocket = socket(AF_INET, SOCK_DGRAM)
 serverSocket.bind(('10.0.99.150', serverPort))
 
